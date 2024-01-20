@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="heading">
+            <h2>Repo Finder</h2>
+        </div>
+        <div class="form">
+         
+                <input name="username" id="username" type="text" placeholder="github:username">
+                <button id="search">Search</button>
+   
+        </div>
+
+        <div id="loading">
+        </div>
+        <h1 id="notfound">
+
+        </h1>
+      <div class="details" id="details">
+            <div class="section1">
+                <div class="profile">
+                    <img src="" id="profileImage" />
+                </div>
+                <div class="profileDetails">
+                    <h2 class="githubname" id="githubname">Tanu kesharwani</h2>
+                    <p class="githubdesc" id="githubdesc">I am tanu kesharwani</p>
+                    <p class="location" id="location">Greater Noida</p>
+                    <div class="links">
+                        <ul id="links">
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="githuburl"><a href="" id="gihuburl"></a></div>
+          <!-- <div class="repos" id="repocards">
+            <div class="repocards" >
+            
+              <h2 class="repoName">Calculator</h2>
+              <p class="repodesc">This is for calculation of different things</p>
+              <div class="repsoLanguags">
+                    <div class="langusa"><p>Javascript</p></div>
+                    <div class="langusa"><p>pythhon</p></div>
+
+              </div>
+          </div>
+        </div> -->
+
+        <div id="repocards" class="repos">
+        </div>
+        <div id="pagination" class="pagination">
+        </div>
+        
+        
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
