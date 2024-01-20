@@ -1,10 +1,4 @@
-const apiKey = "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";
-const requestOptions = {
-    method: 'GET',
-    headers: {
-        'Authorization': `Bearer ${apiKey}`,
-    }
-};
+
 
 let userPublicRepo = []; // Declare the array here
 
@@ -36,7 +30,7 @@ button.addEventListener('click', function () {
     const userName = document.getElementById('username').value;
 
     const apiUrl = `https://api.github.com/users/${userName}`;
-    fetch(apiUrl, requestOptions)
+    fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
                 alert('User not found');
@@ -56,7 +50,7 @@ button.addEventListener('click', function () {
             gihuburl.href= userData.html_url;
             gihuburl.innerHTML = userData.url?userData.html_url:'No url found';
             const repourl = userData.repos_url?userData.repos_url:'Not repo url found';
-            fetch(repourl, requestOptions)
+            fetch(repourl)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response shows error');
@@ -92,7 +86,7 @@ function renderRepositoryCards(data) {
         const languagesUrl = repoData.languages_url;
         
         try {
-            const response = await fetch(languagesUrl, requestOptions);
+            const response = await fetch(languagesUrl);
             if (!response.ok) {
                 throw new Error('Network response is not OK');
             }
